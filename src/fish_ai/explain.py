@@ -15,6 +15,8 @@ def get_instructions(commandline):
             The response must begin with a verb. The sentences should be
             written in {language}.
 
+            In Cantonese, use "嘅" instead of "的", and use "係" instead of "是".
+
             You may use the following manpage to help explain the command:
 
             {manpage}''').format(
@@ -27,7 +29,7 @@ def get_instructions(commandline):
         },
         {
             'role': 'assistant',
-            'content': 'List all disks on the system'
+            'content': '列出系統上嘅所有磁碟'
         },
         {
             'role': 'user',
@@ -35,7 +37,7 @@ def get_instructions(commandline):
         },
         {
             'role': 'assistant',
-            'content': 'Pull the Alpine 3 container from DockerHub'
+            'content': '從 DockerHub 拉取 Alpine 3 容器'
         },
         {
             'role': 'user',
@@ -43,8 +45,7 @@ def get_instructions(commandline):
         },
         {
             'role': 'assistant',
-            'content': 'Substitute all occurrences of the string "foo" with ' +
-                    'the string "bar" in the file "docker-compose.yml"'
+            'content': '將文件 "docker-compose.yml" 中嘅所有 "foo" 字串替換為 "bar" 字串。'
         },
         {
             'role': 'user',
